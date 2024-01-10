@@ -1,2 +1,0 @@
-# minimum
-this is blog 
