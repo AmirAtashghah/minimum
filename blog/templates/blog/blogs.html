@@ -1,0 +1,44 @@
+{% extends 'main.html' %}
+
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'blogs.css' %}">
+{% endblock %}
+
+
+{% block content %}
+
+
+<p style="display: block;">this is my blogs page</p>
+<hr>
+
+<div class="blogGrid">
+
+  {% for blog in blogs %}
+  <div class="blog">
+    <a href="{% url 'singleBlog' blog.id %}">
+      <div>
+        <img class="blogImage"  src="{{ MEDIA_URL }}{{ blog.image.url }}">
+      </div>
+      <div class="blogInfo">
+        <div>
+          <img class="profilePhoto"  src="{{ MEDIA_URL }}{{ blog.author.profile_picture.url }}">
+        </div>
+        <div>
+          <h2>Author: {{ blog.author }}</h2>
+          <h2>Title: {{ blog.title }}</h2>
+          <h2>Content: {{ blog.content|slice:":50" }}</h2>
+          <h4>Created: {{ blog.created_at }}</h4>
+          <h4>Updated: {{ blog.updated_at }}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+  {% endfor %}
+
+</div>
+<hr>
+
+
+{% endblock %}
