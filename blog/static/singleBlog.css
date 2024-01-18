@@ -1,0 +1,35 @@
+.blogInfoGrid {
+  display: grid;
+  grid-template-columns: 200px 3fr 1fr;
+  column-gap: 50px;
+}
+
+
+.profilePhoto {
+  width: 100%;
+  border-radius: 100px;
+}
+
+
+
+.blogImage {
+  width: 100%;
+}
+
+p {
+  font-size: 20px;
+}
+
+.commentGrid {
+  display: grid;
+  grid-template-columns: 50px 100px 1fr;
+  column-gap: 20px;
+  border-style: solid;
+  border-color: gray;
+  border-radius: 15px;
+}
+
+.commentProfile {
+  width: 100%;
+  border-radius: 30px;
+}
