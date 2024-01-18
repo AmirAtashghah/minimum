@@ -1,0 +1,10 @@
+.user_profile_div {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  column-gap: 50px;
+}
+
+.profile_image {
+  width: 100%;
+  border-radius: 100px;
+}

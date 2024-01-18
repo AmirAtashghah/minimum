@@ -1,0 +1,24 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="{% static 'userprofile.css' %}">
+
+    <h1></h1>
+  </head>
+  <body>
+    <div class="user_profile_div">
+      <div>
+        <img class="profile_image"  src="{{ MEDIA_URL }}{{ user.profile_picture.url }}">
+      </div>
+      <div>
+        <h2>{{ user.name }}</h2>
+        <h2>{{ user.email }}</h2>
+        <h2>{{ user.bio }}</h2>
+      </div>
+    </div>
+    <hr>
+  </body>
+</html>

@@ -17,7 +17,7 @@
 
   {% for blog in blogs %}
   <div class="blog">
-    <a href="{% url 'singleBlog' blog.id %}">
+    <a href="{% url 'single_blog' blog.id %}">
       <div>
         <img class="blogImage"  src="{{ MEDIA_URL }}{{ blog.image.url }}">
       </div>

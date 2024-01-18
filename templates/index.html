@@ -29,7 +29,7 @@
     <a href="{% url 'logout' %}">Logout</a>
     <a href="#about">About</a>
     <a href="{% url 'create_blog_post' %}">Start write</a>
-    <a href="{% url 'logout' %}">Profile</a>
+    <a href="{% url 'userprofile' request.user.profile.id %}">Profile</a>
     <input type="text" placeholder="Search..">
     {% else %}
     <a href="#home">Home</a>
@@ -56,7 +56,7 @@
 <div class="posts">
   <div style="overflow: hidden;">
   <h5>{{ post.author }}&nbsp;&nbsp;.&nbsp;&nbsp;{{ post.created_at }}</h5>
-  <h2>{{ post.title }}</h2>
+  <h2>{{ post.id }}</h2>
   <p>{{ post.content }}</p>
   <text>{{ post.tags }}</text>
   </div>
